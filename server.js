@@ -19,7 +19,7 @@ var myService = {
         SamplePortSoap: {
             SampleOperation: function (args) {
                 return {
-                    name: args.name
+                    name: 'Hello ' + args.name
                 };
             }
         }
