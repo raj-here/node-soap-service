@@ -59,7 +59,7 @@ http://localhost:8001/rest-service
 
 #### Test Soap Service
 Content-Type: text/xml 
-![](https://i.ibb.co/X28kxDR/Capture.png)
+![](https://i.ibb.co/VtcSBs8/Capture.png)
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
