@@ -1,0 +1,25 @@
+{
+  "name": "node-soap-service",
+  "version": "1.0.0",
+  "description": "This is Sample Project to Consume and Response SOAP and Rest web service in node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "soap",
+    "web-service",
+    "api",
+    "rest",
+    "express",
+    "wsdl"
+  ],
+  "author": "RAJ CHAUHAN",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "soap": "^0.30.0"
+  }
+}

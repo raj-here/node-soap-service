@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The <definitions> element must be the root element of all WSDL documents. It defines the name of the web service. -->
+<wsdl:definitions name="pimSoapService"
+   targetNamespace="https://www.facebook.com/world.raj95"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="https://www.facebook.com/world.raj95"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- WSDL <types> element takes care of defining the data types that are used by the web service. Types are XML documents, or document parts. -->
+	<wsdl:types>
+		<xs:schema
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://www.facebook.com/world.raj95">
+			<xs:element name="SampleRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SampleResponse">
+				<xs:complexType>
+					<xs:sequence>
+                  <xs:element name="name" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<!-- The <message> element describes the data being exchanged between the web service providers and the consumers -->
+	<wsdl:message name="SampleRequest">
+		<wsdl:part element="tns:SampleRequest" name="SampleRequest" />
+	</wsdl:message>
+	<wsdl:message name="SampleResponse">
+		<wsdl:part element="tns:SampleResponse" name="SampleResponse" />
+	</wsdl:message>
+	<!-- A <portType> can combine one request and one response message into a single request/response operation -->
+	<portType name = "Sample_PortType">
+		<operation name = "SampleOperation">
+			<input message = "tns:SampleRequest"/>
+			<output message = "tns:SampleResponse"/>
+		</operation>
+	</portType>
+   <!-- The <binding> element provides specific details on how a portType operation will actually be transmitted over the wire -->
+      <!-- The bindings provide information where the service is located. -->
+    <wsdl:binding name="SamplePortSoap" type="tns:Sample_PortType">
+      <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:operation name="SampleOperation">
+         <soap:operation soapAction="" />
+         <wsdl:input name="SampleRequest">
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output name="SampleResponse">
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+
+   <!-- A <port> element defines an individual endpoint by specifying a single address for a binding -->
+    <wsdl:service name="SamplePortService">
+      <wsdl:port binding="tns:SamplePortSoap" name="SamplePortSoap">
+         <soap:address location="http://localhost:8001/sample-api" />
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>
