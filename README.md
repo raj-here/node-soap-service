@@ -61,8 +61,8 @@ http://localhost:8001/rest-service
 ![](https://i.ibb.co/VtcSBs8/Capture.png)
 
 
-### Sample Request
-#### Request Header
+#### Sample Request
+##### Request Header
 Content-Type: text/xml 
 
 #### Request Type Method
@@ -78,7 +78,7 @@ POST
 </soap:Envelope>
 ```
 
-### Sample Request
+#### Sample Response
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
