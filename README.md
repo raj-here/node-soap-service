@@ -65,8 +65,7 @@ http://localhost:8001/rest-service
 ##### Request Header
 Content-Type: text/xml 
 
-#### Request Type Method
-POST
+##### Request Type Method: POST
 
 ```
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tns="https://www.facebook.com/world.raj95">
