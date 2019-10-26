@@ -58,8 +58,27 @@ http://localhost:8001/rest-service
 ```
 
 #### Test Soap Service
-Content-Type: text/xml 
 ![](https://i.ibb.co/VtcSBs8/Capture.png)
+
+
+### Sample Request
+#### Request Header
+Content-Type: text/xml 
+
+#### Request Type Method
+POST
+
+```
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:tns="https://www.facebook.com/world.raj95">
+    <soap:Body>
+        <SampleRequest xmlns="https://www.facebook.com/world.raj95">
+            <name>Raj Chauhan</name>
+        </SampleRequest>
+    </soap:Body>
+</soap:Envelope>
+```
+
+### Sample Request
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
