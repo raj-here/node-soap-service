@@ -1,6 +1,7 @@
 var soap = require('soap');
 var express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var myService = {
     // Student's WSDL need to be configured
@@ -29,6 +30,7 @@ var myService = {
 var xml = require('fs').readFileSync('myWsdl.wsdl', 'utf8');
 var app = express();
 app.use(bodyParser.raw({ type: function () { return true; }, limit: '5mb' }));
+app.use(cors());
 app.listen(8001, function () {
     let server = soap.listen(app, '/soap-service', myService, xml, function () {
         console.log('server initialized');
