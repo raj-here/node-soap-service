@@ -58,6 +58,12 @@ http://localhost:8001/rest-service
 ```
 
 #### Test Soap Service
+
+```sh
+http://localhost:8001/soap-service
+```
+
+
 ![](https://i.ibb.co/VtcSBs8/Capture.png)
 
 
