@@ -58,7 +58,7 @@
    <!-- A <port> element defines an individual endpoint by specifying a single address for a binding -->
     <wsdl:service name="SamplePortService">
       <wsdl:port binding="tns:SamplePortSoap" name="SamplePortSoap">
-         <soap:address location="http://localhost:8001/sample-api" />
+         <soap:address location="http://localhost:8001/soap-service"/>
       </wsdl:port>
    </wsdl:service>
 </wsdl:definitions>
